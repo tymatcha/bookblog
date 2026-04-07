@@ -3,31 +3,20 @@ layout: default
 ---
 
 <article class="book-review">
-  <div class="book-header">
-    {% if page.genre %}
-    <span class="card-genre">{{ page.genre }}</span>
-    {% endif %}
-    <h1>{{ page.title }}</h1>
-    <p class="book-meta">
-      {{ page.author }}
-      &nbsp;&middot;&nbsp;
-      <span class="rating">
-        {%- for i in (1..5) -%}
-          {%- if i <= page.rating -%}<span class="star-filled">&#9733;</span>{%- else -%}<span class="star-empty">&#9733;</span>{%- endif -%}
-        {%- endfor -%}
-      </span>
-      &nbsp;&middot;&nbsp;
-      Read {{ page.date_read | date: "%B %Y" }}
-    </p>
-  </div>
-
-  {% if page.cover_image %}
-  <img src="{{ page.cover_image | relative_url }}" alt="Cover of {{ page.title }}" class="book-cover">
-  {% endif %}
+  <h1>{{ page.title }}</h1>
+  <p class="book-meta">
+    {{ page.author }}
+    &nbsp;&middot;&nbsp;
+    <span class="rating">
+      {%- for i in (1..5) -%}
+        {%- if i <= page.rating -%}<span class="star-filled">&#9733;</span>{%- else -%}<span class="star-empty">&#9733;</span>{%- endif -%}
+      {%- endfor -%}
+    </span>
+  </p>
 
   <div class="book-body">
     {{ content }}
   </div>
 
-  <a href="{{ '/' | relative_url }}" class="back-link">&larr; Back to library</a>
+  <a href="{{ '/' | relative_url }}" class="back-link">&larr; Back</a>
 </article>

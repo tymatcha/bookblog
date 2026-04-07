@@ -1,100 +1,41 @@
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.25rem;
+.book-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.book-card {
-  display: flex;
-  gap: 1rem;
-  background: $surface;
-  border-radius: $card-radius;
-  padding: 1.25rem;
-  text-decoration: none;
-  color: inherit;
-  border-left: 4px solid $stripe-1;
-  transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.25s ease;
+.book-item {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid $rule-color;
 
-  &:nth-child(5n+1) {
-    border-left-color: $stripe-1;
-    &:hover { box-shadow: 0 4px 20px rgba($stripe-1, 0.2); }
-  }
-  &:nth-child(5n+2) {
-    border-left-color: $stripe-2;
-    &:hover { box-shadow: 0 4px 20px rgba($stripe-2, 0.2); }
-  }
-  &:nth-child(5n+3) {
-    border-left-color: $stripe-3;
-    &:hover { box-shadow: 0 4px 20px rgba($stripe-3, 0.2); }
-  }
-  &:nth-child(5n+4) {
-    border-left-color: $stripe-4;
-    &:hover { box-shadow: 0 4px 20px rgba($stripe-4, 0.2); }
-  }
-  &:nth-child(5n+5) {
-    border-left-color: $stripe-5;
-    &:hover { box-shadow: 0 4px 20px rgba($stripe-5, 0.2); }
+  &:first-child {
+    padding-top: 0;
   }
 
-  &:hover {
-    transform: translateY(-3px);
-    background: lighten($surface, 4%);
-    text-decoration: none;
-  }
+  a {
+    display: block;
 
-  // Staggered fade-in
-  animation: fadeIn 0.4s ease-out both;
-  @for $i from 1 through 12 {
-    &:nth-child(#{$i}) {
-      animation-delay: #{$i * 0.06}s;
+    &:hover .book-title {
+      color: $accent;
     }
   }
 }
 
-.card-cover {
-  flex-shrink: 0;
-
-  img {
-    width: 80px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 4px;
-    display: block;
-  }
-}
-
-.card-info {
-  flex: 1;
-  min-width: 0;
-}
-
-.card-title {
-  font-size: 1.15rem;
-  font-weight: 700;
-  margin: 0 0 0.3rem;
-  color: $ink;
-}
-
-.card-rule {
-  display: none;
-}
-
-.card-author {
-  font-size: 0.85rem;
-  color: $ink-muted;
-  margin: 0 0 0.4rem;
-}
-
-.card-rating {
-  font-size: 0.9rem;
-  letter-spacing: 0.08em;
-  margin: 0 0 0.4rem;
-}
-
-.card-teaser {
-  font-size: 0.85rem;
-  color: $ink-muted;
-  font-style: normal;
-  line-height: 1.5;
+.book-title {
+  font-size: 1rem;
+  font-weight: 600;
   margin: 0;
+  transition: color 0.15s;
+}
+
+.book-author {
+  font-size: 0.85rem;
+  color: $ink-muted;
+  margin: 0.2rem 0 0;
+}
+
+.book-rating {
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  margin: 0.25rem 0 0;
 }

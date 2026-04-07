@@ -2,12 +2,6 @@
   box-sizing: border-box;
 }
 
-// Fade-in animation
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
 body {
   margin: 0;
   background: $bg;
@@ -20,32 +14,10 @@ body {
 main {
   max-width: $max-width;
   margin: 0 auto;
-  padding: 2rem 1rem;
-  animation: fadeIn 0.4s ease-out;
+  padding: 2rem 1.5rem;
 }
 
 a {
-  color: $accent;
-  text-decoration: none;
-
-  &:hover {
-    color: $accent-hover;
-  }
-}
-
-.site-header {
-  max-width: $max-width;
-  margin: 0 auto;
-  padding: 2rem 1rem 1.5rem;
-  display: flex;
-  align-items: baseline;
-  gap: 1rem;
-  border-bottom: 1px solid $rule-color;
-}
-
-.site-title {
-  font-size: 1.5rem;
-  font-weight: 700;
   color: $ink;
   text-decoration: none;
 
@@ -54,75 +26,46 @@ a {
   }
 }
 
-.site-dateline {
-  font-size: 0.85rem;
-  color: $ink-muted;
-  flex: 1;
+.site-header {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 1rem;
+  border-bottom: 1px solid $rule-color;
 }
 
-.site-nav a {
-  font-size: 0.85rem;
-  margin-left: 1.25rem;
-  color: $ink-muted;
+.site-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: $ink;
+  text-decoration: none;
+}
 
-  &:hover {
-    color: $ink;
+.site-nav {
+  margin-top: 0.5rem;
+
+  a {
+    font-size: 0.85rem;
+    color: $ink-muted;
+    margin-right: 1rem;
+
+    &:hover {
+      color: $ink;
+    }
   }
 }
 
 .site-footer {
   max-width: $max-width;
-  margin: 3rem auto 1rem;
-  padding: 1rem;
-  text-align: center;
+  margin: 4rem auto 2rem;
+  padding: 0 1.5rem;
   color: $ink-muted;
   font-size: 0.8rem;
-  border-top: 1px solid $rule-color;
 }
 
-// Homepage intro
-.home-intro {
-  margin-bottom: 1.5rem;
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-}
-
-.home-subtitle {
-  font-size: 1.1rem;
-  color: $ink-muted;
-  font-weight: 400;
-  margin: 0;
-}
-
-.book-count {
-  font-size: 0.8rem;
-  color: $ink-muted;
-  margin: 0;
-  background: $surface;
-  padding: 0.25rem 0.75rem;
-  border-radius: 20px;
-}
-
-// Stars
 .star-filled {
   color: $star-color;
 }
 
 .star-empty {
   color: $rule-color;
-}
-
-// Genre pill
-.card-genre {
-  display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  padding: 0.15rem 0.6rem;
-  border-radius: 20px;
-  margin-bottom: 0.5rem;
-  background: rgba(123, 159, 224, 0.15);
-  color: $accent;
 }
