@@ -4,7 +4,7 @@ author: "Ernest Hemingway"
 rating: 4
 date_read: 2026-04-07
 genre: fiction
-cover_image: https://covers.openlibrary.org/b/isbn/9780684801223-M.jpg
+cover_image: /bookblog/assets/images/covers/the-old-man-and-the-sea.jpg
 ---
 
 Review coming soon.

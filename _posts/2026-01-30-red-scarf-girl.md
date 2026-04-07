@@ -4,7 +4,7 @@ author: "Ji-Li Jiang"
 rating: 4
 date_read: 2026-01-30
 genre: memoir
-cover_image: https://covers.openlibrary.org/b/id/8568200-M.jpg
+cover_image: /bookblog/assets/images/covers/red-scarf-girl.jpg
 ---
 
 Review coming soon.
