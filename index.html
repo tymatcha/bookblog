@@ -1,0 +1,21 @@
+---
+layout: default
+title: Book Index
+---
+
+<div class="card-grid">
+  {% assign books = site.posts | sort: "date" | reverse %}
+  {% for book in books %}
+  <a href="{{ book.url | relative_url }}" class="book-card">
+    <p class="card-title">{{ book.title }}</p>
+    <hr class="card-rule">
+    <p class="card-author">{{ book.author }}</p>
+    <p class="card-rating">
+      {%- for i in (1..5) -%}
+        {%- if i <= book.rating -%}&#9733;{%- else -%}&#9734;{%- endif -%}
+      {%- endfor -%}
+    </p>
+    <p class="card-teaser">{{ book.excerpt | strip_html | truncate: 80 }}</p>
+  </a>
+  {% endfor %}
+</div>

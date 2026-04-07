@@ -1,0 +1,50 @@
+.book-review {
+  max-width: 65ch;
+}
+
+.book-header {
+  margin-bottom: 2rem;
+}
+
+.book-header h1 {
+  font-size: 1.8rem;
+  margin: 0 0 0.5rem;
+}
+
+.book-meta {
+  color: $ink-light;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.book-meta .rating {
+  color: $star-color;
+  letter-spacing: 0.1em;
+}
+
+.book-cover {
+  max-width: 200px;
+  float: right;
+  margin: 0 0 1rem 1.5rem;
+  box-shadow: $shadow;
+
+  @media (max-width: 600px) {
+    float: none;
+    display: block;
+    margin: 0 auto 1.5rem;
+  }
+}
+
+.book-body {
+  margin-bottom: 2rem;
+
+  p {
+    margin: 0 0 1rem;
+  }
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}

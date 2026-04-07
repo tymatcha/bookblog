@@ -1,0 +1,64 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: $cream;
+  color: $ink;
+  font-family: $font-body;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+a {
+  color: $accent;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.site-header {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $rule-color;
+}
+
+.site-title {
+  font-size: 1.4rem;
+  color: $ink;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+
+  &:hover {
+    text-decoration: none;
+    color: $accent;
+  }
+}
+
+.site-nav a {
+  margin-left: 1.5rem;
+  font-size: 0.9rem;
+}
+
+main {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.site-footer {
+  max-width: $max-width;
+  margin: 3rem auto 1rem;
+  padding: 1rem;
+  text-align: center;
+  color: $ink-light;
+  font-size: 0.8rem;
+  border-top: 1px solid $rule-color;
+}

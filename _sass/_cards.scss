@@ -1,0 +1,55 @@
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($card-width, 1fr));
+  gap: 1.5rem;
+}
+
+.book-card {
+  display: block;
+  background: $card-bg;
+  border: 1px solid $rule-color;
+  border-radius: $card-radius;
+  padding: $card-padding;
+  box-shadow: $shadow;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    box-shadow: $shadow-hover;
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-rule {
+  border: none;
+  border-top: 1px solid $rule-color;
+  margin: 0.75rem 0;
+}
+
+.card-author {
+  color: $ink-light;
+  font-size: 0.9rem;
+  margin: 0 0 0.5rem;
+}
+
+.card-rating {
+  color: $star-color;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  margin: 0 0 0.5rem;
+}
+
+.card-teaser {
+  color: $ink-light;
+  font-size: 0.85rem;
+  font-style: italic;
+  margin: 0;
+}

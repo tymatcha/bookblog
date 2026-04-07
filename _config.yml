@@ -1,0 +1,18 @@
+title: "Book Index"
+description: "A personal reading log"
+baseurl: "/bookblog"
+url: ""
+
+permalink: /books/:slug/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: book
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
