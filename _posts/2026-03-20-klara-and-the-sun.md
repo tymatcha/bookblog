@@ -4,6 +4,7 @@ author: "Kazuo Ishiguro"
 rating: 5
 date_read: 2026-02-10
 genre: sci-fi
+cover_image: https://covers.openlibrary.org/b/isbn/9780571364886-M.jpg
 ---
 
 A quiet, devastating book about what it means to love someone you can never fully understand.

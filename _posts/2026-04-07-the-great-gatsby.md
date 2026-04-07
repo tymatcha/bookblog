@@ -4,6 +4,7 @@ author: "F. Scott Fitzgerald"
 rating: 4
 date_read: 2026-03-15
 genre: fiction
+cover_image: https://covers.openlibrary.org/b/isbn/9780743273565-M.jpg
 ---
 
 A shimmering portrait of the Jazz Age that never quite lets you forget the emptiness underneath.
