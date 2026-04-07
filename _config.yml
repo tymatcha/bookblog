@@ -1,7 +1,7 @@
 title: "Book Index"
 description: "A personal reading log"
 baseurl: "/bookblog"
-url: ""
+url: "https://tymatcha.github.io"
 
 permalink: /books/:slug/
 
