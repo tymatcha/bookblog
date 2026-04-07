@@ -1,16 +1,14 @@
-$cream: #FAF7F0;
-$card-bg: #FFF8EE;
-$ink: #2C2C2C;
-$ink-light: #6B6B6B;
-$accent: #8B4513;
-$rule-color: #D4C5A9;
-$star-color: #C8A951;
+// Broadsheet theme — newspaper aesthetic
+$page-bg: #F5F1EB;
+$card-bg: $page-bg;
+$ink: #1A1A1A;
+$ink-light: #555555;
+$accent: #8B0000;
+$rule-color: #1A1A1A;
+$rule-light: #C8C0B4;
+$star-color: #1A1A1A;
 
-$font-body: 'Special Elite', 'Courier New', monospace;
+$font-headline: 'Cormorant Garamond', 'Georgia', serif;
+$font-body: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
 
-$card-width: 280px;
-$card-padding: 1.5rem;
-$card-radius: 2px;
-$shadow: 2px 2px 6px rgba(0, 0, 0, 0.08);
-$shadow-hover: 3px 3px 10px rgba(0, 0, 0, 0.14);
-$max-width: 960px;
+$max-width: 1000px;

@@ -1,55 +1,70 @@
 .card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax($card-width, 1fr));
-  gap: 1.5rem;
+  column-count: 3;
+  column-gap: 1.5rem;
+  column-rule: 1px solid $rule-light;
+
+  @media (max-width: 768px) {
+    column-count: 2;
+  }
+
+  @media (max-width: 480px) {
+    column-count: 1;
+  }
 }
 
 .book-card {
   display: block;
-  background: $card-bg;
-  border: 1px solid $rule-color;
-  border-radius: $card-radius;
-  padding: $card-padding;
-  box-shadow: $shadow;
+  break-inside: avoid;
+  padding: 1rem 0;
+  border-bottom: 1px solid $rule-light;
+  margin-bottom: 0;
   text-decoration: none;
   color: inherit;
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  transition: color 0.15s ease;
 
   &:hover {
-    box-shadow: $shadow-hover;
-    transform: translateY(-2px);
     text-decoration: none;
+
+    .card-title {
+      color: $accent;
+    }
   }
 }
 
 .card-title {
-  font-size: 1.1rem;
-  font-weight: bold;
-  margin: 0;
+  font-family: $font-headline;
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 0.25rem;
+  transition: color 0.15s ease;
 }
 
 .card-rule {
-  border: none;
-  border-top: 1px solid $rule-color;
-  margin: 0.75rem 0;
+  display: none;
 }
 
 .card-author {
+  font-family: $font-body;
+  font-size: 0.8rem;
   color: $ink-light;
-  font-size: 0.9rem;
-  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 0.4rem;
 }
 
 .card-rating {
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  margin: 0 0 0.4rem;
   color: $star-color;
-  font-size: 1rem;
-  letter-spacing: 0.1em;
-  margin: 0 0 0.5rem;
 }
 
 .card-teaser {
-  color: $ink-light;
+  font-family: $font-body;
   font-size: 0.85rem;
+  color: $ink;
   font-style: italic;
+  line-height: 1.5;
   margin: 0;
 }
