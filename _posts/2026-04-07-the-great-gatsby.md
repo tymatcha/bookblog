@@ -3,6 +3,7 @@ title: "The Great Gatsby"
 author: "F. Scott Fitzgerald"
 rating: 4
 date_read: 2026-03-15
+genre: fiction
 ---
 
 A shimmering portrait of the Jazz Age that never quite lets you forget the emptiness underneath.

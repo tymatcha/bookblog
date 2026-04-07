@@ -12,18 +12,41 @@
   text-decoration: none;
   color: inherit;
   border-left: 4px solid $stripe-1;
-  transition: transform 0.15s ease, background 0.15s ease;
+  transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.25s ease;
 
-  &:nth-child(5n+1) { border-left-color: $stripe-1; }
-  &:nth-child(5n+2) { border-left-color: $stripe-2; }
-  &:nth-child(5n+3) { border-left-color: $stripe-3; }
-  &:nth-child(5n+4) { border-left-color: $stripe-4; }
-  &:nth-child(5n+5) { border-left-color: $stripe-5; }
+  &:nth-child(5n+1) {
+    border-left-color: $stripe-1;
+    &:hover { box-shadow: 0 4px 20px rgba($stripe-1, 0.2); }
+  }
+  &:nth-child(5n+2) {
+    border-left-color: $stripe-2;
+    &:hover { box-shadow: 0 4px 20px rgba($stripe-2, 0.2); }
+  }
+  &:nth-child(5n+3) {
+    border-left-color: $stripe-3;
+    &:hover { box-shadow: 0 4px 20px rgba($stripe-3, 0.2); }
+  }
+  &:nth-child(5n+4) {
+    border-left-color: $stripe-4;
+    &:hover { box-shadow: 0 4px 20px rgba($stripe-4, 0.2); }
+  }
+  &:nth-child(5n+5) {
+    border-left-color: $stripe-5;
+    &:hover { box-shadow: 0 4px 20px rgba($stripe-5, 0.2); }
+  }
 
   &:hover {
     transform: translateY(-3px);
     background: lighten($surface, 4%);
     text-decoration: none;
+  }
+
+  // Staggered fade-in
+  animation: fadeIn 0.4s ease-out both;
+  @for $i from 1 through 12 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.06}s;
+    }
   }
 }
 
@@ -45,7 +68,6 @@
 }
 
 .card-rating {
-  color: $star-color;
   font-size: 0.9rem;
   letter-spacing: 0.08em;
   margin: 0 0 0.5rem;

@@ -3,6 +3,7 @@ title: "Project Hail Mary"
 author: "Andy Weir"
 rating: 4
 date_read: 2026-01-22
+genre: sci-fi
 ---
 
 The most fun I've had reading a book in a long time. Pure problem-solving joy wrapped in a surprisingly emotional story.
