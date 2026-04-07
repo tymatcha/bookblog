@@ -6,6 +6,4 @@ permalink: /about/
 
 # About
 
-This is a personal reading log — a quiet place to keep notes on the books I've read.
-
-Each card on the index is a book. Click one to read my thoughts on it.
+Hey, I'm Ty. This is where I keep track of what I've been reading and what I thought about it. Nothing too serious — just honest notes on books I liked, loved, or couldn't finish.
