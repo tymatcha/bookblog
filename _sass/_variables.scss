@@ -1,14 +1,21 @@
-// Broadsheet theme — newspaper aesthetic
-$page-bg: #F5F1EB;
-$card-bg: $page-bg;
-$ink: #1A1A1A;
-$ink-light: #555555;
-$accent: #8B0000;
-$rule-color: #1A1A1A;
-$rule-light: #C8C0B4;
-$star-color: #1A1A1A;
+// Late Night Reads — dark, playful, casual
+$bg: #151820;
+$surface: #1E2230;
+$ink: #E8E4DF;
+$ink-muted: #9B96A0;
+$accent: #7B9FE0;
+$accent-hover: #A3BFf0;
+$star-color: #F0C85A;
+$rule-color: #2E3344;
 
-$font-headline: 'Cormorant Garamond', 'Georgia', serif;
-$font-body: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+$font-body: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
 
-$max-width: 1000px;
+$card-radius: 12px;
+$max-width: 960px;
+
+// Card left-border accent colors (rotating)
+$stripe-1: #E07B7B; // warm red
+$stripe-2: #7BE0B0; // mint
+$stripe-3: #E0C37B; // gold
+$stripe-4: #7BB5E0; // sky blue
+$stripe-5: #C37BE0; // lavender

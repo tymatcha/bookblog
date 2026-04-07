@@ -1,43 +1,37 @@
 .card-grid {
-  column-count: 3;
-  column-gap: 1.5rem;
-  column-rule: 1px solid $rule-light;
-
-  @media (max-width: 768px) {
-    column-count: 2;
-  }
-
-  @media (max-width: 480px) {
-    column-count: 1;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
 }
 
 .book-card {
   display: block;
-  break-inside: avoid;
-  padding: 1rem 0;
-  border-bottom: 1px solid $rule-light;
-  margin-bottom: 0;
+  background: $surface;
+  border-radius: $card-radius;
+  padding: 1.25rem 1.25rem 1.25rem 1.5rem;
   text-decoration: none;
   color: inherit;
-  transition: color 0.15s ease;
+  border-left: 4px solid $stripe-1;
+  transition: transform 0.15s ease, background 0.15s ease;
+
+  &:nth-child(5n+1) { border-left-color: $stripe-1; }
+  &:nth-child(5n+2) { border-left-color: $stripe-2; }
+  &:nth-child(5n+3) { border-left-color: $stripe-3; }
+  &:nth-child(5n+4) { border-left-color: $stripe-4; }
+  &:nth-child(5n+5) { border-left-color: $stripe-5; }
 
   &:hover {
+    transform: translateY(-3px);
+    background: lighten($surface, 4%);
     text-decoration: none;
-
-    .card-title {
-      color: $accent;
-    }
   }
 }
 
 .card-title {
-  font-family: $font-headline;
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   font-weight: 700;
-  line-height: 1.2;
-  margin: 0 0 0.25rem;
-  transition: color 0.15s ease;
+  margin: 0 0 0.3rem;
+  color: $ink;
 }
 
 .card-rule {
@@ -45,26 +39,22 @@
 }
 
 .card-author {
-  font-family: $font-body;
-  font-size: 0.8rem;
-  color: $ink-light;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin: 0 0 0.4rem;
+  font-size: 0.85rem;
+  color: $ink-muted;
+  margin: 0 0 0.5rem;
 }
 
 .card-rating {
-  font-size: 0.85rem;
-  letter-spacing: 0.05em;
-  margin: 0 0 0.4rem;
   color: $star-color;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  margin: 0 0 0.5rem;
 }
 
 .card-teaser {
-  font-family: $font-body;
   font-size: 0.85rem;
-  color: $ink;
-  font-style: italic;
+  color: $ink-muted;
+  font-style: normal;
   line-height: 1.5;
   margin: 0;
 }

@@ -4,10 +4,10 @@
 
 body {
   margin: 0;
-  background: $page-bg;
+  background: $bg;
   color: $ink;
   font-family: $font-body;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.6;
 }
 
@@ -16,76 +16,59 @@ a {
   text-decoration: none;
 
   &:hover {
-    text-decoration: underline;
+    color: $accent-hover;
   }
 }
 
 .site-header {
   max-width: $max-width;
   margin: 0 auto;
-  padding: 2rem 1rem 0.75rem;
-  text-align: center;
-  border-bottom: 3px double $rule-color;
+  padding: 2rem 1rem 1.5rem;
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  border-bottom: 1px solid $rule-color;
 }
 
 .site-title {
-  font-family: $font-headline;
-  font-size: 2.8rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: $ink;
   text-decoration: none;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  display: block;
 
   &:hover {
-    text-decoration: none;
-    color: $ink;
+    color: $accent;
   }
 }
 
 .site-dateline {
-  font-family: $font-body;
-  font-size: 0.75rem;
-  color: $ink-light;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  color: $ink-muted;
+  flex: 1;
 }
 
-.site-nav {
-  margin-top: 0.5rem;
-  padding-top: 0.5rem;
-  border-top: 1px solid $rule-light;
+.site-nav a {
+  font-size: 0.85rem;
+  margin-left: 1.25rem;
+  color: $ink-muted;
 
-  a {
-    font-family: $font-body;
-    font-size: 0.8rem;
+  &:hover {
     color: $ink;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin: 0 0.75rem;
-
-    &:hover {
-      color: $accent;
-      text-decoration: none;
-    }
   }
 }
 
 main {
   max-width: $max-width;
   margin: 0 auto;
-  padding: 1.5rem 1rem;
+  padding: 2rem 1rem;
 }
 
 .site-footer {
   max-width: $max-width;
-  margin: 2rem auto 1rem;
-  padding: 0.75rem 1rem;
+  margin: 3rem auto 1rem;
+  padding: 1rem;
   text-align: center;
-  color: $ink-light;
-  font-size: 0.75rem;
-  border-top: 1px solid $rule-light;
-  letter-spacing: 0.05em;
+  color: $ink-muted;
+  font-size: 0.8rem;
+  border-top: 1px solid $rule-color;
 }
