@@ -6,4 +6,4 @@ permalink: /about/
 
 # About
 
-I'm Ty. This is where I keep track of what I've been reading.
+Currently trying to read more to cure my inability to put together just one good sentence.

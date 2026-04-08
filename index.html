@@ -3,19 +3,32 @@ layout: default
 title: Books
 ---
 
-<ul class="book-list">
-  {% assign books = site.posts | sort: "date" | reverse %}
-  {% for book in books %}
-  <li class="book-item">
-    <a href="{{ book.url | relative_url }}">
-      <p class="book-title">{{ book.title }}</p>
-      <p class="book-author">{{ book.author }}</p>
-      <p class="book-rating">
-        {%- for i in (1..5) -%}
-          {%- if i <= book.rating -%}<span class="star-filled">&#9733;</span>{%- else -%}<span class="star-empty">&#9733;</span>{%- endif -%}
-        {%- endfor -%}
-      </p>
-    </a>
-  </li>
-  {% endfor %}
-</ul>
+<p class="book-count">{{ site.posts.size }} book{% if site.posts.size != 1 %}s{% endif %}</p>
+
+{% assign books = site.posts | sort: "date" | reverse %}
+{% assign grouped = books | group_by_exp: "book", "book.date | date: '%Y'" %}
+
+{% for year in grouped %}
+<div class="year-group">
+  <p class="year-label">{{ year.name }}</p>
+  <ul class="book-list">
+    {% for book in year.items %}
+    <li class="book-item">
+      <a href="{{ book.url | relative_url }}">
+        <p class="book-title">{{ book.title }}</p>
+        <p class="book-author">{{ book.author }}</p>
+        <p class="book-rating">
+          {%- for i in (1..5) -%}
+            {%- if i <= book.rating -%}<span class="star-filled">&#9733;</span>{%- else -%}<span class="star-empty">&#9733;</span>{%- endif -%}
+          {%- endfor -%}
+        </p>
+        {% assign teaser = book.content | strip_html | truncate: 100 %}
+        {% if teaser != "Review coming soon." %}
+        <p class="book-teaser">{{ teaser }}</p>
+        {% endif %}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endfor %}

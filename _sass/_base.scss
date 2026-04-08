@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background: $bg;
@@ -20,6 +24,7 @@ main {
 a {
   color: $ink;
   text-decoration: none;
+  transition: color 0.2s;
 
   &:hover {
     color: $accent;
@@ -38,6 +43,10 @@ a {
   font-weight: 600;
   color: $ink;
   text-decoration: none;
+
+  &:hover {
+    color: $accent;
+  }
 }
 
 .site-nav {
@@ -58,7 +67,7 @@ a {
   max-width: $max-width;
   margin: 4rem auto 2rem;
   padding: 0 1.5rem;
-  color: $ink-muted;
+  color: $ink-faint;
   font-size: 0.8rem;
 }
 

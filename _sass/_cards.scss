@@ -1,3 +1,21 @@
+.book-count {
+  font-size: 0.8rem;
+  color: $ink-faint;
+  margin: 0 0 1.5rem;
+}
+
+.year-group {
+  margin-bottom: 2.5rem;
+}
+
+.year-label {
+  font-size: 0.75rem;
+  color: $ink-faint;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0 0 0.75rem;
+}
+
 .book-list {
   list-style: none;
   padding: 0;
@@ -5,37 +23,55 @@
 }
 
 .book-item {
-  padding: 1.25rem 0;
+  padding: 1rem 0;
   border-bottom: 1px solid $rule-color;
-
-  &:first-child {
-    padding-top: 0;
-  }
 
   a {
     display: block;
+    transition: opacity 0.2s;
 
-    &:hover .book-title {
-      color: $accent;
+    &:hover {
+      .book-title {
+        color: $accent;
+      }
+
+      .book-teaser {
+        color: $ink-muted;
+      }
     }
   }
 }
 
 .book-title {
-  font-size: 1rem;
-  font-weight: 600;
+  font-family: $font-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  font-style: italic;
   margin: 0;
-  transition: color 0.15s;
+  transition: color 0.2s;
 }
 
 .book-author {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: $ink-muted;
-  margin: 0.2rem 0 0;
+  margin: 0.15rem 0 0;
+  padding-left: 0.1rem;
 }
 
 .book-rating {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   letter-spacing: 0.05em;
-  margin: 0.25rem 0 0;
+  margin: 0.3rem 0 0;
+  padding-left: 0.1rem;
+}
+
+.book-teaser {
+  font-size: 0.8rem;
+  color: $ink-faint;
+  margin: 0.4rem 0 0;
+  padding-left: 0.1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: color 0.2s;
 }
